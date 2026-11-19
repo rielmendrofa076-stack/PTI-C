@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Campus Music Fest 2026</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Campus<span>Fest</span></div>
+            <ul class="nav-links">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Schedule.html">Schedule</a></li>
+                <li><a href="Register.html" class="active">Register</a></li>
+                <li><a href="Login.html" class="btn-nav">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="form-box">
+            <h2>Pendaftaran Tiket</h2>
+            <form style="margin-top: 15px;" onsubmit="event.preventDefault(); alert('Pendaftaran Berhasil!');">
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" placeholder="Masukkan nama lengkap" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="nama@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Kategori Tiket</label>
+                    <select>
+                        <option>Presale - Rp 35.000</option>
+                        <option>Regular - Rp 50.000</option>
+                        <option>VIP Pass - Rp 85.000</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Daftar Sekarang</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kelompok Tugas Rancang PTI - Campus Art & Music Festival</p>
+    </footer>
+</body>
+</html>
