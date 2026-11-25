@@ -6,56 +6,88 @@
     <title>Campus Music Fest 2026 - Home</title>
     <link rel="stylesheet" href="CSS.css">
 </head>
-<body data-page="home">
-    <header id="hdr"></header>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html">Campus<span>Fest</span></a>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="schedule.html">Schedule</a></li>
+                <li><button class="btn-nav" type="button" popovertarget="akun">👤 Akun</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="akun" popover>
+        <button class="x" type="button" popovertarget="akun" popovertargetaction="hide" aria-label="Tutup">✕</button>
+        <iframe src="index.html#profil" title="Profil akun" loading="lazy"></iframe>
+    </div>
 
     <main class="container">
         <section class="hero">
             <div>
                 <h1>Campus Music<span class="out">Festival 2026</span></h1>
-                <p class="lead"><span id="hi"></span> Rasakan sensasi musik &amp; seni terbesar tahun ini!</p>
+                <p class="lead">Selamat datang! Rasakan sensasi musik &amp; seni terbesar tahun ini.</p>
                 <div class="chips"><span>🗓️ 25 – 26 November 2026</span><span>📍 Lapangan Utama Kampus</span></div>
                 <a class="btn go" href="schedule.html">Lihat jadwal</a>
             </div>
-            <aside class="ticket" id="tix" aria-label="E-ticket kamu"></aside>
+            <aside class="ticket" aria-hidden="true">
+                <small>Festival pass</small>
+                <h3>2 hari<br>live music</h3>
+                <p>25 – 26 November 2026<br>Lapangan Utama Kampus</p>
+                <hr>
+                <div class="bar"></div>
+            </aside>
         </section>
 
         <h2 class="sec">Highlight acara</h2>
-
-        <article class="act" style="--c: var(--pink)">
-            <h3>Live Concert</h3>
-            <div>
-                <p>Penampilan spesial dari guest star nasional dan band lokal kampus pilihan. Dua malam, dua panggung, dan satu lapangan yang ikut nyanyi bareng.</p>
-                <ul class="tags"><li>Hari 1: Indie Stage</li><li>Hari 2: Main Concert</li><li>Guest star segera diumumkan</li></ul>
-            </div>
-        </article>
-
-        <article class="act" style="--c: var(--violet)">
-            <h3>Art Exhibition</h3>
-            <div>
-                <p>Pameran karya seni digital, lukisan, dan instalasi kreatif mahasiswa dari berbagai jurusan. Datang buat lihat, ngobrol dengan senimannya, atau ikut workshop langsung.</p>
-                <ul class="tags"><li>Seni digital</li><li>Lukisan</li><li>Instalasi kreatif</li><li>Workshop</li></ul>
-            </div>
-        </article>
-
-        <article class="act" style="--c: var(--amber)">
-            <h3>Food &amp; Culinary</h3>
-            <div>
-                <p>Puluhan booth makanan dan minuman kekinian untuk menemani festival, dari jajanan kenyang sampai kopi buat begadang nonton band.</p>
-                <ul class="tags"><li>Puluhan booth</li><li>Makanan</li><li>Minuman kekinian</li></ul>
-            </div>
-        </article>
-
-        <article class="act" style="--c: var(--cyan)">
-            <h3>Open Mic &amp; Jam Session</h3>
-            <div>
-                <p>Panggung terbuka untuk mahasiswa yang mau unjuk bakat: akustikan, puisi, stand-up, atau jam session bareng musisi lain. Tampil dulu, malu belakangan.</p>
-                <ul class="tags"><li>Panggung terbuka</li><li>Jam session</li><li>Untuk semua jurusan</li></ul>
-            </div>
-        </article>
+        <p class="lead" style="margin-top:0">Klik kotak acara untuk melihat info lengkapnya.</p>
+        <div class="card-grid">
+            <details class="card" style="--c: var(--pink)">
+                <summary><span class="ic">🎤</span><h3>Live Concert</h3><span class="d">Penampilan spesial dari guest star nasional dan band lokal kampus pilihan.</span></summary>
+                <div>
+                    <p>Dua malam, dua panggung. Hari 1 di Indie Stage bersama guest star <b>Aruna Lestari</b>, hari 2 di Main Concert bersama <b>Raka Mahendra</b>. Band mahasiswa Kopi Pagi, Nada Rantau, dan Senja di Kampus ikut meramaikan.</p>
+                    <ul class="tags"><li>Hari 1: Indie Stage</li><li>Hari 2: Main Concert</li></ul>
+                    <p><a href="schedule.html">Lihat rundown lengkap</a></p>
+                </div>
+            </details>
+            <details class="card" style="--c: var(--violet)">
+                <summary><span class="ic">🎨</span><h3>Art Exhibition</h3><span class="d">Pameran karya seni digital, lukisan, dan instalasi kreatif mahasiswa.</span></summary>
+                <div>
+                    <p>Karya mahasiswa dari berbagai jurusan dipajang dalam satu area. Datang untuk melihat, ngobrol dengan senimannya, atau ikut workshop interaktif di hari 2 pukul 16.00 – 18.00.</p>
+                    <ul class="tags"><li>Seni digital</li><li>Lukisan</li><li>Instalasi kreatif</li><li>Workshop</li></ul>
+                </div>
+            </details>
+            <details class="card" style="--c: var(--amber)">
+                <summary><span class="ic">🍜</span><h3>Food &amp; Culinary</h3><span class="d">Puluhan booth makanan dan minuman kekinian untuk menemani festival.</span></summary>
+                <div>
+                    <p>Dari jajanan yang bikin kenyang sampai kopi buat begadang nonton band. Bebas jajan di sela-sela penampilan.</p>
+                    <ul class="tags"><li>Puluhan booth</li><li>Makanan</li><li>Minuman kekinian</li></ul>
+                </div>
+            </details>
+            <details class="card" style="--c: var(--cyan)">
+                <summary><span class="ic">🎙️</span><h3>Open Mic &amp; Jam Session</h3><span class="d">Panggung terbuka untuk mahasiswa yang mau unjuk bakat.</span></summary>
+                <div>
+                    <p>Akustikan, puisi, stand-up, atau jam session bareng musisi lain. Tampil dulu, malu belakangan. Jadwal tampil dan cara daftar diumumkan menyusul.</p>
+                    <ul class="tags"><li>Panggung terbuka</li><li>Jam session</li><li>Semua jurusan</li></ul>
+                </div>
+            </details>
+        </div>
     </main>
 
-    <footer id="ftr"></footer>
-    <script src="script.js"></script>
+    <footer>
+        <div class="f-grid">
+            <div><div class="logo">Campus<span>Fest</span></div><p>Wadah ekspresi musik dan seni mahasiswa.<br>25 – 26 November 2026, Lapangan Utama Kampus.</p></div>
+            <div><h3>Info event</h3><p>Tanya soal acara lewat WhatsApp:<br><a href="https://wa.me/6281234567890" target="_blank" rel="noopener"><strong>+62 812-3456-7890</strong></a></p></div>
+            <div><h3>Ikuti kami</h3>
+                <div class="social">
+                    <a href="https://instagram.com/campusfest2026" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg></a>
+                    <a href="https://facebook.com/campusfest2026" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+                    <a href="https://tiktok.com/@campusfest2026" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M16 3v10a4 4 0 1 1-4-4"/><path d="M16 3c.4 2.4 2.2 4 5 4.3"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <p class="copy">&copy; 2026 Kelompok Tugas Rancang PTI - Campus Art &amp; Music Festival</p>
+    </footer>
 </body>
 </html>
