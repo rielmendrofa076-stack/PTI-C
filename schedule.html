@@ -6,38 +6,35 @@
     <title>Schedule - Campus Music Fest 2026</title>
     <link rel="stylesheet" href="CSS.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Campus<span>Fest</span></div>
-            <ul class="nav-links">
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Schedule.html" class="active">Schedule</a></li>
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="Login.html" class="btn-nav">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-page="schedule">
+    <header id="hdr"></header>
 
-    <main class="container">
-        <h2>Jadwal & Lineup Acara</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Hari 1 - Indie Stage</h3>
-                <p><strong>15.00 - 18.00:</strong> Student Band Performance</p>
-                <p><strong>19.00 - 21.00:</strong> Indie Guest Star Night</p>
-            </div>
-            <div class="card">
-                <h3>Hari 2 - Main Concert</h3>
-                <p><strong>16.00 - 18.00:</strong> Art Exhibition & Workshop</p>
-                <p><strong>19.30 - 22.00:</strong> Main Guest Star Performance</p>
-            </div>
+    <main class="container soon">
+        <h1>Coming<span class="out">soon</span></h1>
+        <p class="lead">Jadwal dan lineup lengkap masih kami racik. Hitung mundur menuju hari pertama festival:</p>
+
+        <div class="count" aria-live="off">
+            <div><b id="cd">00</b>Hari</div>
+            <div><b id="ch">00</b>Jam</div>
+            <div><b id="cm">00</b>Menit</div>
+            <div><b id="cs">00</b>Detik</div>
         </div>
+
+        <div class="tba">
+            <article class="act" style="--c: var(--pink)">
+                <h3>Hari 1: Indie Stage</h3>
+                <p>Lineup dan rundown segera diumumkan.</p>
+            </article>
+            <article class="act" style="--c: var(--violet)">
+                <h3>Hari 2: Main Concert</h3>
+                <p>Lineup dan rundown segera diumumkan.</p>
+            </article>
+        </div>
+
+        <a class="btn go" href="https://instagram.com/campusfest2026" target="_blank" rel="noopener">Ikuti Instagram untuk pengumuman</a>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Kelompok Tugas Rancang PTI - Campus Art & Music Festival</p>
-    </footer>
+    <footer id="ftr"></footer>
+    <script src="script.js"></script>
 </body>
 </html>

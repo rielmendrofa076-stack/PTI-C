@@ -3,49 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Music Fest 2026 - Home</title>
+    <title>Campus Music Fest 2026 - Masuk</title>
     <link rel="stylesheet" href="CSS.css">
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">Campus<span>Fest</span></div>
-            <ul class="nav-links">
-                <li><a href="Index.html" class="active">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Schedule.html">Schedule</a></li>
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="Login.html" class="btn-nav">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<body data-page="auth">
+    <header id="hdr"></header>
 
-    <main class="container">
-        <section class="hero">
-            <h1>CAMPUS MUSIC FESTIVAL 2026</h1>
-            <p>Rasakan Sensasi Musik & Seni Terbesar Tahun Ini!</p>
-            <a href="Register.html" class="cta-btn">Beli Tiket Sekarang</a>
+    <main class="container hero">
+        <section>
+            <h1>Feel the beat<span class="out">Own the night</span></h1>
+            <p class="lead">Campus Music &amp; Art Festival 2026: dua hari penuh musik, seni, dan jajanan. Masuk atau daftar dulu, lalu amankan tiketmu.</p>
+            <div class="chips"><span>🗓️ 25 – 26 November 2026</span><span>📍 Lapangan Utama Kampus</span></div>
+            <div class="now" aria-hidden="true">
+                <div class="vinyl"></div>
+                <div>
+                    <small>Sedang diputar</small>
+                    <strong>Campus Music Fest 2026</strong>
+                    <div class="eq"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                </div>
+            </div>
         </section>
 
-        <h2>Highlight Acara</h2>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Live Concert</h3>
-                <p>Penampilan spesial dari guest star nasional dan band lokal kampus pilihan.</p>
-            </div>
-            <div class="card">
-                <h3>Art Exhibition</h3>
-                <p>Pameran karya seni digital, lukisan, dan instalasi kreatif mahasiswa.</p>
-            </div>
-            <div class="card">
-                <h3>Food & Culinary</h3>
-                <p>Puluhan booth makanan dan minuman kekinian untuk menemani festival.</p>
-            </div>
-        </div>
+        <section class="panel" id="authBox">
+            <div class="tabs"><button type="button" class="on">Masuk</button><button type="button">Daftar</button></div>
+            <p id="msg" role="alert"></p>
+
+            <form id="loginForm">
+                <div class="fg">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="nama@email.com" autocomplete="email" required>
+                </div>
+                <div class="fg">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" placeholder="Masukkan password" autocomplete="current-password" required>
+                </div>
+                <button type="submit" class="btn">Masuk</button>
+            </form>
+
+            <form id="regForm" hidden>
+                <div class="fg">
+                    <label for="rName">Nama lengkap</label>
+                    <input type="text" id="rName" name="name" placeholder="Masukkan nama lengkap" autocomplete="name" required>
+                </div>
+                <div class="fg">
+                    <label for="rEmail">Email</label>
+                    <input type="email" id="rEmail" name="email" placeholder="nama@email.com" autocomplete="email" required>
+                </div>
+                <div class="fg">
+                    <label for="rPw">Password</label>
+                    <input type="password" id="rPw" name="pw" placeholder="Minimal 6 karakter" autocomplete="new-password" required>
+                </div>
+                <div class="fg">
+                    <label for="rPw2">Konfirmasi password</label>
+                    <input type="password" id="rPw2" name="pw2" placeholder="Ketik ulang password" autocomplete="new-password" required>
+                </div>
+                <label>Kategori tiket</label>
+                <div class="pick">
+                    <label><input type="radio" name="ticket" value="Presale" checked><span>Presale <b>Rp 35.000</b></span></label>
+                    <label><input type="radio" name="ticket" value="Regular"><span>Regular <b>Rp 50.000</b></span></label>
+                    <label><input type="radio" name="ticket" value="VIP Pass"><span>VIP Pass <b>Rp 85.000</b></span></label>
+                </div>
+                <button type="submit" class="btn">Daftar &amp; amankan tiket</button>
+            </form>
+        </section>
     </main>
 
-    <footer>
-        <p>© 2026 Kelompok Tugas Rancang PTI - Campus Art & Music Festival</p>
-    </footer>
+    <footer id="ftr"></footer>
+    <script src="script.js"></script>
 </body>
 </html>
